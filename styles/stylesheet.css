@@ -182,14 +182,14 @@ h1 {
   font-size: 48px;
   text-align: center;
   border-bottom: solid white 1px;
-  margin: 0 14%;
+  margin: 0 12%;
 }
 
 .c-golfer__ratings {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   grid-template-rows: auto;
-  margin: 0 18%;
+  margin: 0 14%;
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
 }
 
@@ -203,10 +203,42 @@ h1 {
   font-size: 24px;
 }
 
-.checked {
-  color: orange;
+.hover-text {
+  position: relative;
+  display: inline-block;
 }
 
+.hover-text .hidden-text {
+  visibility: hidden;
+  width: 120px;
+  bottom: 100%;
+  left: 50%;
+  margin-left: -60px;
+  text-transform: none;
+  font-size: 12px;
+  background-color: #111;
+  color: white;
+  text-align: center;
+  padding: 5px 0;
+  border-radius: 6px;
+  position: absolute;
+  z-index: 1;
+}
+
+.hover-text:hover .hidden-text {
+  visibility: visible;
+}
+
+.hover-text .hidden-text::after {
+  content: " ";
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  margin-left: -5px;
+  border-width: 5px;
+  border-style: solid;
+  border-color: #111 transparent transparent transparent;
+}
 /* Mobile Formatting */
 @media (max-width: 768px) {
   .o-flex {
