@@ -143,6 +143,17 @@ h1 {
   font-size: 18px;
 }
 
+li > a {
+  color: white;
+  text-decoration: none;
+}
+
+li > a:hover {
+  color: #0078d7;
+  text-decoration: none;
+  cursor: pointer;
+}
+
 /* Contestants */
 .c-golfers__header {
   margin: auto;
